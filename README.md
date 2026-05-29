@@ -1,4 +1,9 @@
 # WISE
+
+<p align="center">
+  <img src="docs/images/logo.png" width="400">
+</p>
+
 ### Wearable Intelligent Security Entry
 
 ---
