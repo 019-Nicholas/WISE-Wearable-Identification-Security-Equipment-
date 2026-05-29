@@ -1,6 +1,6 @@
 # WISE
 
-![](docs/images/LOGO.png)
+![](docs/images/logo.png)
 
 ### Wearable Intelligent Security Entry
 
