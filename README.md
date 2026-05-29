@@ -1,7 +1,7 @@
 # WISE
 
 <p align="center">
-  <img src="docs/images/logo.png" width="400">
+  <img src="docs/images/logo.png" width="700">
 </p>
 
 ### Wearable Intelligent Security Entry
@@ -19,7 +19,6 @@ Sistem menggunakan mekanisme transmit-on-demand, sehingga sinyal wireless hanya 
 ## 🎯 Tujuan Proyek
 
 - Mengurangi risiko relay attack
-- Menghemat konsumsi daya
 - Mengurangi risiko kehilangan remote kendaraan
 - Mengembangkan wearable embedded system berbasis AVR
 
@@ -30,7 +29,6 @@ Sistem menggunakan mekanisme transmit-on-demand, sehingga sinyal wireless hanya 
 - Wearable-based access system
 - Single button multi-command interface
 - OLED status display
-- Low-power operation
 - Temporary RF transmission
 - Magnetic charging dock
 - Wireless authentication system
