@@ -8,7 +8,7 @@
 
 ---
 
-## Deskripsi Proyek
+## 📖 Deskripsi Proyek
 
 WISE merupakan sistem wearable secure access berbasis AVR yang dirancang untuk mengurangi risiko relay attack pada sistem keyless entry konvensional.
 
@@ -16,7 +16,7 @@ Sistem menggunakan mekanisme transmit-on-demand, sehingga sinyal wireless hanya 
 
 ---
 
-## Tujuan Proyek
+## 🎯 Tujuan Proyek
 
 - Mengurangi risiko relay attack
 - Menghemat konsumsi daya
@@ -25,7 +25,7 @@ Sistem menggunakan mekanisme transmit-on-demand, sehingga sinyal wireless hanya 
 
 ---
 
-## Fitur Utama
+## ⚙️ Fitur Utama
 
 - Wearable-based access system
 - Single button multi-command interface
@@ -37,7 +37,7 @@ Sistem menggunakan mekanisme transmit-on-demand, sehingga sinyal wireless hanya 
 
 ---
 
-## Cara Kerja Sistem
+## 🔄 Cara Kerja Sistem
 
 1. Wearable berada pada mode sleep untuk menghemat daya.
 2. Pengguna menekan tombol pada wearable.
@@ -49,7 +49,7 @@ Sistem menggunakan mekanisme transmit-on-demand, sehingga sinyal wireless hanya 
 
 ---
 
-## Komponen Hardware
+## 🔧 Komponen Hardware
 
 | Komponen | Fungsi |
 |---|---|
@@ -64,26 +64,26 @@ Sistem menggunakan mekanisme transmit-on-demand, sehingga sinyal wireless hanya 
 
 ---
 
-## Visualisasi Sistem
+## 🧭 Visualisasi Sistem
 
-### Blok Diagram
+### 📊 Blok Diagram
 ![Block Diagram](docs/images/block_diagram.png)
 
-### Flowchart
+### 🌊 Flowchart
 ![Flowchart](docs/images/flowchart.png)
 
-### Desain Hardware
+### 🧱 Desain Hardware
 ![Hardware Design](docs/images/hardware_design.png)
 
-### Desain 3D
+### 🧩 Desain 3D
 ![3D Design](docs/images/3d_design.png)
 
-### GUI Monitoring
+### 📱 GUI Monitoring
 ![GUI Preview](docs/images/gui_preview.png)
 
 ---
 
-## Tim Pengembang
+## 👥 Tim Pengembang
 
 | Nama | NRP | Divisi |
 |---|---|---|
@@ -96,7 +96,7 @@ Sistem menggunakan mekanisme transmit-on-demand, sehingga sinyal wireless hanya 
 
 ---
 
-## Future Development
+## 🚀 Future Development
 
 - Mobile application integration
 - Encrypted wireless communication
