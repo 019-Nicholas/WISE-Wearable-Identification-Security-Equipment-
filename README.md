@@ -85,7 +85,8 @@ Sistem menggunakan mekanisme transmit-on-demand, sehingga sinyal wireless hanya 
 
 | Nama | NRP | Divisi |
 |---|---|---|
-| Nicholas Miftahudin IB | 2124600019 | Project Manager |
+| [Nicholas Miftahudin IB](https://github.com/019-Nicholas)
+ | 2124600019 | Project Manager |
 | Susanto Angga Adi P. | 2124600022 | Software Engineer |
 | Aditya Triyoga H. | 2124600030 | Hardware Engineer |
 | Trimuna Tsuroya | 2125640037 | 3D Designer |
