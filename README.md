@@ -86,11 +86,11 @@ Sistem menggunakan mekanisme transmit-on-demand, sehingga sinyal wireless hanya 
 | Nama | NRP | Divisi |
 |---|---|---|
 | [Nicholas Miftahudin IB](https://github.com/019-Nicholas) | 2124600019 | Project Manager |
-| Susanto Angga Adi P. | 2124600022 | Software Engineer |
-| Aditya Triyoga H. | 2124600030 | Hardware Engineer |
-| Trimuna Tsuroya | 2125640037 | 3D Designer |
-| M. Sagara Putra R. | 2124600025 | UI/UX Designer |
-| Nauval Putra H. | 2124600009 | UI/UX Designer |
+| [Susanto Angga Adi P.](https://github.com/022-ANGGA) | 2124600022 | Software Engineer |
+| [Aditya Triyoga H.](https://github.com/030-Adityatriyoga) | 2124600030 | Hardware Engineer |
+| [Trimuna Tsuroya](https://github.com/TrimunaTsuroya-2125640037) | 2125640037 | 3D Designer |
+| [M. Sagara Putra R.](https://github.com/025-Garaa) | 2124600025 | UI/UX Designer |
+| [Nauval Putra H.](https://github.com/nauvalph-009)| 2124600009 | UI/UX Designer |
 
 ---
 
