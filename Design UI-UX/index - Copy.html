@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WISE - Smart Access Made Simple</title>
+    <meta name="description" content="WISE - Smart vehicle access control. Lock and unlock your car with ease.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=400;500;600;700;800;900&family=Outfit:wght=400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="status-bar">
+            <span class="time" id="currentTime">10:09</span>
+            <div class="status-icons">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                    <path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/>
+                </svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                    <path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4z"/>
+                </svg>
+            </div>
+        </div>
+
+        <header class="header">
+            <div class="logo">
+                <span class="logo-w">W</span><span class="logo-i">I</span><span class="logo-s">S</span><span class="logo-e">E</span>
+            </div>
+            <div class="profile-wrapper">
+                <button class="profile-btn" id="profileBtn" aria-label="Profile">
+                    <svg class="profile-icon-default" id="profileIconDefault" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                    <span class="profile-avatar-text" id="profileAvatarText" style="display:none;"></span>
+                </button>
+                
+                <div class="profile-dropdown" id="profileDropdown">
+                    <div class="dropdown-login" id="dropdownLogin">
+                        <div class="dropdown-header-pro">
+                            <div class="dropdown-brand">
+                                <span class="brand-w">W</span><span class="brand-i">I</span><span class="brand-s">S</span><span class="brand-e">E</span>
+                            </div>
+                            <div class="dropdown-avatar-pro">
+                                <div class="avatar-ring">
+                                    <svg width="36" height="36" viewBox="0 0 24 24" fill="#4A5E80">
+                                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <h3 class="dropdown-title">Selamat Datang</h3>
+                            <p class="dropdown-subtitle">Masuk untuk mengakses kendaraan Anda</p>
+                        </div>
+                        <form class="login-form" id="loginForm">
+                            <div class="input-group">
+                                <label for="loginEmail">Email</label>
+                                <div class="input-wrapper">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#4A5E80">
+                                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                    </svg>
+                                    <input type="email" id="loginEmail" placeholder="nama@email.com" required autocomplete="email">
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label for="loginPassword">Password</label>
+                                <div class="input-wrapper">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#4A5E80">
+                                        <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+                                    </svg>
+                                    <input type="password" id="loginPassword" placeholder="Masukkan password" required autocomplete="current-password">
+                                    <button type="button" class="toggle-password" id="togglePassword" aria-label="Toggle password">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#4A5E80">
+                                            <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn-login" id="btnLogin">
+                                <span>Masuk</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                                </svg>
+                            </button>
+                            <p class="login-error" id="loginError"></p>
+                        </form>
+                    </div>
+
+                    <div class="dropdown-logged" id="dropdownLogged" style="display:none;">
+                        <div class="logged-banner">
+                            <div class="logged-avatar-large" id="loggedAvatar">U</div>
+                            <div class="logged-info">
+                                <span class="logged-name" id="loggedName">User</span>
+                                <span class="logged-email" id="loggedEmail">user@email.com</span>
+                            </div>
+                            <div class="logged-badge">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="#34D399">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                                <span>Terverifikasi</span>
+                            </div>
+                        </div>
+                        <div class="logged-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">1</span>
+                                <span class="stat-label">Kendaraan</span>
+                            </div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-item">
+                                <span class="stat-value">12</span>
+                                <span class="stat-label">Akses</span>
+                            </div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-item">
+                                <span class="stat-value">30</span>
+                                <span class="stat-label">Hari</span>
+                            </div>
+                        </div>
+                        <div class="logged-menu">
+                            <button class="dropdown-menu-item" id="btnMyVehicle">
+                                <div class="menu-icon-wrap orange">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
+                                    </svg>
+                                </div>
+                                <span>Kendaraan Saya</span>
+                                <svg class="menu-arrow" width="16" height="16" viewBox="0 0 24 24" fill="#4A5E80">
+                                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/>
+                                </svg>
+                            </button>
+                            <button class="dropdown-menu-item" id="btnAccount">
+                                <div class="menu-icon-wrap purple">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                                    </svg>
+                                </div>
+                                <span>Akun Saya</span>
+                                <svg class="menu-arrow" width="16" height="16" viewBox="0 0 24 24" fill="#4A5E80">
+                                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/>
+                                </svg>
+                            </button>
+                            <div class="dropdown-divider"></div>
+                            <button class="dropdown-menu-item logout" id="btnLogout">
+                                <div class="menu-icon-wrap red">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5-5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/>
+                                    </svg>
+                                </div>
+                                <span>Keluar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="overlay" id="overlay"></div>
+
+        <main class="main-content page-content active" id="pageHome">
+            <section class="greeting-section">
+                <p class="greeting-label">SELAMAT PAGI</p>
+                <h1 class="greeting-title">
+                    <span>Smart Access</span>
+                    <span>Made <em>Simple</em></span>
+                </h1>
+            </section>
+            
+            <section class="vehicle-card" id="vehicleCard">
+                <div class="vehicle-header">
+                    <div class="vehicle-info">
+                        <span class="vehicle-label">KENDARAAN ANDA</span>
+                        <h2 class="vehicle-name">BMW M4<br>2024</h2>
+                    </div>
+                    <div class="lock-status" id="lockStatus">
+                        <span class="status-dot"></span>
+                        <span class="status-text">TERKUNCI</span>
+                    </div>
+                </div>
+                
+                <div class="car-illustration-realistic">
+                    <div class="glow-ring-realistic" id="glowRing"></div>
+                    <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=600&q=80" alt="BMW M4 2024" class="car-image" id="carImage">
+                </div>
+
+                <div class="realtime-log-container" id="realtimeLogSection">
+                    <div class="log-header">
+                        <span class="log-title">LOG AKTIVITAS REALTIME</span>
+                        <span class="live-indicator"><span class="pulse-dot"></span>live</span>
+                    </div>
+                    <div class="log-body" id="logBody">
+                        <div class="log-row item-fade-in text-muted">Hari Ini, 10:09:00 - Sistem diinisialisasi secara aman.</div>
+                    </div>
+                </div>
+
+                <div class="control-actions">
+                    <button class="btn btn-lock active" id="btnLock">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+                        </svg>
+                        <span>LOCK</span>
+                    </button>
+                    <button class="btn btn-unlock" id="btnUnlock">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6-5c1.71 0 3.1 1.39 3.1 3.1V8H8.9V6c0-1.71 1.39-3.1 3.1-3.1z"/>
+                        </svg>
+                        <span>UNLOCK</span>
+                    </button>
+                </div>
+            </section>
+
+            <section class="battery-card">
+                <div class="battery-header">
+                    <div class="battery-title-block">
+                        <span class="battery-label">STATUS BATERAI</span>
+                        <h3 class="battery-percentage" id="batteryPercent">87%</h3>
+                    </div>
+                    <div class="battery-status-tag standard-charging">
+                        <div class="charging-icon-pulse">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M7 2v11h3v9l7-12h-4l4-8z"/>
+                            </svg>
+                        </div>
+                        <span>PENGISIAN DAYA...</span>
+                    </div>
+                </div>
+                
+                <div class="battery-progress-wrapper">
+                    <div class="battery-progress-track">
+                        <div class="battery-progress-bar" id="batteryBar" style="width: 87%;"></div>
+                    </div>
+                </div>
+                
+                <div class="battery-metrics">
+                    <div class="metric-box">
+                        <span class="metric-val" id="batteryRange">320 km</span>
+                        <span class="metric-lbl">Jangkauan</span>
+                    </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric-box">
+                        <span class="metric-val" id="batteryTemp">28°C</span>
+                        <span class="metric-lbl">Temperatur</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <nav class="bottom-nav">
+            <button class="nav-item active" data-page="home" id="navHome">
+                <div class="nav-icon-wrapper">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                    </svg>
+                </div>
+                <span>HOME</span>
+            </button>
+            <button class="nav-item" data-page="log" id="navLog">
+                <div class="nav-icon-wrapper">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 10 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                    </svg>
+                </div>
+                <span>LOG</span>
+            </button>
+            <button class="nav-item" data-page="setelan" id="navSetelan">
+                <div class="nav-icon-wrapper">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/>
+                    </svg>
+                </div>
+                <span>SETELAN</span>
+            </button>
+        </nav>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
