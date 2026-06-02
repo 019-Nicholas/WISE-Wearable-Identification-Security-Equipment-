@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WISE - Smart Access Made Simple</title>
+    <meta name="description" content="WISE - Smart vehicle access control. Lock and unlock your car with ease.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=400;500;600;700;800;900&family=Outfit:wght=400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="status-bar">
+            <span class="time" id="currentTime">10:09</span>
+            <div class="status-icons">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                    <path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/>
+                </svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                    <path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4z"/>
+                </svg>
+            </div>
+        </div>
+
+        <header class="header">
+            <div class="logo">
+                <span class="logo-w">W</span><span class="logo-i">I</span><span class="logo-s">S</span><span class="logo-e">E</span>
+            </div>
+            <div class="profile-wrapper">
+                <button class="profile-btn" id="profileBtn" aria-label="Profile">
+                    <svg class="profile-icon-default" id="profileIconDefault" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                    <span class="profile-avatar-text" id="profileAvatarText" style="display:none;"></span>
+                </button>
+                
+                <div class="profile-dropdown" id="profileDropdown">
+                    <div class="dropdown-login" id="dropdownLogin">
+                        <div class="dropdown-header-pro">
+                            <div class="dropdown-brand">
+                                <span class="brand-w">W</span><span class="brand-i">I</span><span class="brand-s">S</span><span class="brand-e">E</span>
+                            </div>
+                            <h3 class="dropdown-title">Selamat Datang</h3>
+                            <p class="dropdown-subtitle">Masuk untuk mengakses kendaraan Anda</p>
+                        </div>
+                        <form class="login-form" id="loginForm">
+                            <div class="input-group">
+                                <label for="loginEmail">Email</label>
+                                <div class="input-wrapper">
+                                    <input type="email" id="loginEmail" placeholder="nama@email.com" required>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label for="loginPassword">Password</label>
+                                <div class="input-wrapper">
+                                    <input type="password" id="loginPassword" placeholder="Masukkan password" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn-login">Masuk</button>
+                        </form>
+                    </div>
+
+                    <div class="dropdown-logged" id="dropdownLogged" style="display:none;">
+                        <div class="logged-banner">
+                            <div class="logged-avatar-large" id="loggedAvatar">U</div>
+                            <div class="logged-info">
+                                <span class="logged-name" id="loggedName">User</span>
+                                <span class="logged-email" id="loggedEmail">user@email.com</span>
+                            </div>
+                        </div>
+                        <div class="logged-menu">
+                            <div class="dropdown-divider"></div>
+                            <button class="dropdown-menu-item logout" id="btnLogout">
+                                <span>Keluar Akun</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="overlay" id="overlay"></div>
+
+        <main class="main-content page-content active" id="pageHome">
+            <section class="greeting-section">
+                <p class="greeting-label">SELAMAT PAGI</p>
+                <h1 class="greeting-title">
+                    <span>Smart Access</span>
+                    <span>Made <em>Simple</em></span>
+                </h1>
+            </section>
+            
+            <section class="vehicle-card">
+                <div class="vehicle-header">
+                    <div class="vehicle-info">
+                        <span class="vehicle-label">KENDARAAN ANDA</span>
+                        <h2 class="vehicle-name">BMW M4<br>2024</h2>
+                    </div>
+                    <div class="lock-status" id="lockStatus">
+                        <span class="status-dot"></span>
+                        <span class="status-text">TERKUNCI</span>
+                    </div>
+                </div>
+                
+                <div class="car-illustration-realistic">
+                    <div class="glow-ring-realistic" id="glowRing"></div>
+                    <div class="car-image-container">
+                        <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=600&q=80" alt="BMW M4 Real" class="car-image" id="carImage">
+                    </div>
+                </div>
+
+                <div class="control-actions">
+                    <button class="btn btn-lock active" id="btnLock"><span>LOCK</span></button>
+                    <button class="btn btn-unlock" id="btnUnlock"><span>UNLOCK</span></button>
+                </div>
+            </section>
+
+            <section class="battery-card">
+                <div class="battery-header">
+                    <div>
+                        <span class="battery-label">STATUS BATERAI</span>
+                        <h3 class="battery-percentage">87%</h3>
+                    </div>
+                </div>
+                <div class="battery-progress-wrapper">
+                    <div class="battery-progress-track">
+                        <div class="battery-progress-bar" style="width: 87%;"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <main class="main-content page-content" id="pageLog" style="display: none;">
+            <section class="greeting-section">
+                <p class="greeting-label">RIWAYAT SISTEM</p>
+                <h1 class="greeting-title">Log <em>Aktivitas</em></h1>
+            </section>
+            
+            <div class="log-page-container">
+                <div class="log-page-header">
+                    <span>LOG AKTIVITAS REALTIME</span>
+                    <span class="live-indicator"><span class="pulse-dot"></span>live</span>
+                </div>
+                <div class="log-page-body" id="logBody">
+                    <div class="log-row text-muted">Sistem siap digunakan secara aman.</div>
+                </div>
+            </div>
+        </main>
+
+        <main class="main-content page-content" id="pageSetelan" style="display: none;">
+            <section class="greeting-section">
+                <p class="greeting-label">KONFIGURASI</p>
+                <h1 class="greeting-title">Setelan <em>Aplikasi</em></h1>
+            </section>
+
+            <div class="settings-container">
+                <div class="settings-group">
+                    <h3 class="settings-group-title">Kendaraan & Koneksi</h3>
+                    <div class="settings-item">
+                        <div class="settings-item-info">
+                            <span class="settings-item-name">Koneksi Otomatis (Bluetooth)</span>
+                            <span class="settings-item-desc">Hubungkan otomatis saat mendekati mobil</span>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="settings-item">
+                        <div class="settings-item-info">
+                            <span class="settings-item-name">Buka Kunci Otomatis (Proximity)</span>
+                            <span class="settings-item-desc">Pintu otomatis terbuka dalam jarak 1 meter</span>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="settings-group">
+                    <h3 class="settings-group-title">Keamanan & Privasi</h3>
+                    <div class="settings-item">
+                        <div class="settings-item-info">
+                            <span class="settings-item-name">Otentikasi Biometrik</span>
+                            <span class="settings-item-desc">Gunakan Face ID / Sidik Jari sebelum unlock</span>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="settings-item">
+                        <div class="settings-item-info">
+                            <span class="settings-item-name">PIN Pengaman Transaksi</span>
+                            <span class="settings-item-desc">Minta PIN untuk akses mode servis</span>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="settings-group">
+                    <h3 class="settings-group-title">Preferensi</h3>
+                    <div class="settings-item">
+                        <div class="settings-item-info">
+                            <span class="settings-item-name">Notifikasi Push</span>
+                            <span class="settings-item-desc">Dapatkan laporan jika pintu gagal terkunci</span>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="settings-item">
+                        <div class="settings-item-info">
+                            <span class="settings-item-name">Mode Performa Tinggi</span>
+                            <span class="settings-item-desc">Animasi lebih mulus (Memakan lebih banyak baterai HP)</span>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+                
+                <p class="app-version">WISE Versi 2.4.0 (Build 2026)</p>
+            </div>
+        </main>
+
+        <nav class="bottom-nav">
+            <button class="nav-item active" data-page="home"><span>HOME</span></button>
+            <button class="nav-item" data-page="log"><span>LOG</span></button>
+            <button class="nav-item" data-page="setelan"><span>SETELAN</span></button>
+        </nav>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
