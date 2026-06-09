@@ -74,8 +74,8 @@ Sistem menggunakan mekanisme transmit-on-demand, sehingga sinyal wireless hanya 
 <img src="https://img.shields.io/badge/Flowchart-PNG-00BCD4?style=for-the-badge&logo=mermaid&logoColor=white">
 </a>
 
-<a href="https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Flowchart%20Program%20WISE.drawio.png&dark=auto#R">
-<img src="https://img.shields.io/badge/draw.io-Flowchart_Program_WISE-F08705?style=for-the-badge&logo=diagramsdotnet&logoColor=white">
+<a href="https://drive.google.com/drive/folders/1QzS82XRwplpNYwvQA6O3_1Lwl-5nDHhQ?usp=sharing">
+<img src="https://img.shields.io/badge/draw.io-Flowchart_program_WISE-F08705?style=for-the-badge&logo=diagramsdotnet&logoColor=white">
 </a>
 
 <a href="docs/images/hardware_design.png">
