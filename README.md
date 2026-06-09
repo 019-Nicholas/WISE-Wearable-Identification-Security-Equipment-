@@ -75,7 +75,7 @@ Sistem menggunakan mekanisme transmit-on-demand, sehingga sinyal wireless hanya 
 </a>
 
 <a href="https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Flowchart%20Program%20WISE.drawio.png&dark=auto#R">
-<img src="https://img.shields.io/badge/draw.io-Editable_Flowchart-F08705?style=for-the-badge&logo=diagramsdotnet&logoColor=white">
+<img src="https://img.shields.io/badge/draw.io-Flowchart_Program_WISE-F08705?style=for-the-badge&logo=diagramsdotnet&logoColor=white">
 </a>
 
 <a href="docs/images/hardware_design.png">
@@ -91,7 +91,7 @@ Sistem menggunakan mekanisme transmit-on-demand, sehingga sinyal wireless hanya 
 </a>
 
 <a href="https://wokwi.com/projects/466366790973248513">
-<img src="https://img.shields.io/badge/Wokwi-ESP32_Simulation-E53935?style=for-the-badge&logo=arduino&logoColor=white">
+<img src="https://img.shields.io/badge/Wokwi-Simulasi_WISE-E53935?style=for-the-badge&logo=arduino&logoColor=white">
 </a>
 
 </p>
