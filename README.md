@@ -64,20 +64,31 @@ Sistem menggunakan mekanisme transmit-on-demand, sehingga sinyal wireless hanya 
 
 ## 🧭 Visualisasi Sistem
 
-### 📊 Blok Diagram
-![Block Diagram](docs/images/block_diagram.png)
+<p align="center">
+  <a href="docs/images/block_diagram.png">
+    <img src="https://img.shields.io/badge/📊-Block_Diagram-blue?style=for-the-badge" alt="Block Diagram">
+  </a>
 
-### 🌊 Flowchart
-![Flowchart](docs/images/flowchart.png)
+  <a href="docs/images/flowchart.png">
+    <img src="https://img.shields.io/badge/🌊-Flowchart-cyan?style=for-the-badge" alt="Flowchart">
+  </a>
 
-### 🧱 Desain Hardware
-![Hardware Design](docs/images/hardware_design.png)
+  <a href="docs/images/hardware_design.png">
+    <img src="https://img.shields.io/badge/🧱-Hardware_Design-orange?style=for-the-badge" alt="Hardware Design">
+  </a>
 
-### 🧩 Desain 3D
-![3D Design](docs/images/3d_design.png)
+  <a href="docs/images/3d_design.png">
+    <img src="https://img.shields.io/badge/🧩-3D_Design-purple?style=for-the-badge" alt="3D Design">
+  </a>
 
-### 📱 GUI Monitoring
-![GUI Preview](docs/images/gui_preview.png)
+  <a href="docs/images/gui_preview.png">
+    <img src="https://img.shields.io/badge/📱-GUI_Monitoring-green?style=for-the-badge" alt="GUI Monitoring">
+  </a>
+
+  <a href="https://wokwi.com/projects/466366790973248513">
+    <img src="https://img.shields.io/badge/Wokwi-Simulation-red?style=for-the-badge&logo=arduino&logoColor=white" alt="Wokwi Simulation">
+  </a>
+</p>
 
 ---
 
