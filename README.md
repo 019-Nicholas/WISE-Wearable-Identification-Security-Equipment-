@@ -91,7 +91,11 @@ Sistem menggunakan mekanisme transmit-on-demand, sehingga sinyal wireless hanya 
 </a>
 
 <a href="https://wokwi.com/projects/466366790973248513">
-<img src="https://img.shields.io/badge/Wokwi-Simulasi_WISE-E53935?style=for-the-badge&logo=arduino&logoColor=white">
+<img src="https://img.shields.io/badge/Wokwi-WISE_Simulation-E53935?style=for-the-badge&logo=arduino&logoColor=white">
+</a>
+
+<a href="https://drive.google.com/drive/folders/1i6udcfMxmYzEKTJt67JZjZPCqsJg9lhk?usp=sharing">
+<img src="https://img.shields.io/badge/Video-Demo-FF0000?style=for-the-badge&logo=youtube&logoColor=white">
 </a>
 
 </p>
