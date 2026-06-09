@@ -65,31 +65,36 @@ Sistem menggunakan mekanisme transmit-on-demand, sehingga sinyal wireless hanya 
 ## 🧭 Visualisasi Sistem
 
 <p align="center">
-  <a href="docs/images/block_diagram.png">
-    <img src="https://img.shields.io/badge/📊-Block_Diagram-blue?style=for-the-badge" alt="Block Diagram">
-  </a>
 
-  <a href="docs/images/flowchart.png">
-    <img src="https://img.shields.io/badge/🌊-Flowchart-cyan?style=for-the-badge" alt="Flowchart">
-  </a>
+<a href="docs/images/block_diagram.png">
+<img src="https://img.shields.io/badge/System-Block_Diagram-0078D7?style=for-the-badge&logo=diagramsdotnet&logoColor=white">
+</a>
 
-  <a href="docs/images/hardware_design.png">
-    <img src="https://img.shields.io/badge/🧱-Hardware_Design-orange?style=for-the-badge" alt="Hardware Design">
-  </a>
+<a href="docs/images/flowchart.png">
+<img src="https://img.shields.io/badge/Flowchart-PNG-00BCD4?style=for-the-badge&logo=mermaid&logoColor=white">
+</a>
 
-  <a href="docs/images/3d_design.png">
-    <img src="https://img.shields.io/badge/🧩-3D_Design-purple?style=for-the-badge" alt="3D Design">
-  </a>
+<a href="https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Flowchart%20Program%20WISE.drawio.png&dark=auto#R">
+<img src="https://img.shields.io/badge/draw.io-Editable_Flowchart-F08705?style=for-the-badge&logo=diagramsdotnet&logoColor=white">
+</a>
 
-  <a href="docs/images/gui_preview.png">
-    <img src="https://img.shields.io/badge/📱-GUI_Monitoring-green?style=for-the-badge" alt="GUI Monitoring">
-  </a>
+<a href="docs/images/hardware_design.png">
+<img src="https://img.shields.io/badge/Hardware-Design-FF9800?style=for-the-badge&logo=raspberrypi&logoColor=white">
+</a>
 
-  <a href="https://wokwi.com/projects/466366790973248513">
-    <img src="https://img.shields.io/badge/Wokwi-Simulation-red?style=for-the-badge&logo=arduino&logoColor=white" alt="Wokwi Simulation">
-  </a>
+<a href="docs/images/3d_design.png">
+<img src="https://img.shields.io/badge/3D-Design-9C27B0?style=for-the-badge&logo=blender&logoColor=white">
+</a>
+
+<a href="docs/images/gui_preview.png">
+<img src="https://img.shields.io/badge/GUI-Monitoring-4CAF50?style=for-the-badge&logo=qt&logoColor=white">
+</a>
+
+<a href="https://wokwi.com/projects/466366790973248513">
+<img src="https://img.shields.io/badge/Wokwi-ESP32_Simulation-E53935?style=for-the-badge&logo=arduino&logoColor=white">
+</a>
+
 </p>
-
 ---
 
 ## 👥 Tim Pengembang
