@@ -95,7 +95,7 @@ Sistem menggunakan mekanisme transmit-on-demand, sehingga sinyal wireless hanya 
 </a>
 
 </p>
----
+
 
 ## 👥 Tim Pengembang
 
