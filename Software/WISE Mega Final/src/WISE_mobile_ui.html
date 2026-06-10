@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WISE – Mobile UI Mockup</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #0a0c14;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'DM Sans', sans-serif;
+    padding: 40px 20px;
+  }
+
+  /* Phone frame */
+  .phone-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .phone-label {
+    color: #555;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    font-family: 'Syne', sans-serif;
+  }
+
+  .phone {
+    width: 390px;
+    min-height: 844px;
+    background: #0d0f1c;
+    border-radius: 54px;
+    border: 2px solid #1e2235;
+    box-shadow:
+      0 0 0 6px #0a0c14,
+      0 0 0 8px #1a1d2e,
+      0 40px 100px rgba(0,0,0,0.8),
+      inset 0 1px 0 rgba(255,255,255,0.05);
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Dynamic island */
+  .dynamic-island {
+    width: 120px;
+    height: 34px;
+    background: #000;
+    border-radius: 20px;
+    margin: 14px auto 0;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .dynamic-island::after {
+    content: '';
+    width: 10px; height: 10px;
+    background: #1a1a1a;
+    border-radius: 50%;
+    margin-left: 30px;
+    border: 1px solid #333;
+  }
+
+  /* Status bar */
+  .status-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 28px;
+    font-size: 12px;
+    color: #fff;
+    font-weight: 500;
+  }
+  .status-time { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 15px; }
+  .status-icons { display: flex; gap: 6px; align-items: center; }
+  .status-icons svg { width: 16px; height: 16px; fill: white; }
+
+  /* Scrollable content */
+  .screen-content {
+    padding: 0 24px 32px;
+    overflow-y: auto;
+    max-height: 760px;
+  }
+
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    padding-top: 4px;
+  }
+  .logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+  .logo span { color: #f59e0b; }
+  .avatar {
+    width: 42px; height: 42px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #1e3a5f, #0e2a4a);
+    border: 1.5px solid #f59e0b55;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+  }
+
+  /* Greeting */
+  .greeting {
+    margin-bottom: 24px;
+  }
+  .greeting .sub {
+    font-size: 13px;
+    color: #5a6080;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Syne', sans-serif;
+  }
+  .greeting h1 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 28px;
+    color: #fff;
+    line-height: 1.15;
+    margin-top: 4px;
+  }
+  .greeting h1 em { color: #f59e0b; font-style: normal; }
+
+  /* Vehicle status card */
+  .vehicle-card {
+    background: linear-gradient(135deg, #0e1b36 0%, #0a1628 60%, #0d1930 100%);
+    border: 1px solid #1e3050;
+    border-radius: 28px;
+    padding: 24px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .vehicle-card::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 180px; height: 180px;
+    background: radial-gradient(circle, rgba(245,158,11,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .vehicle-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  .vehicle-label {
+    font-size: 11px;
+    color: #5a6080;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Syne', sans-serif;
+    margin-bottom: 4px;
+  }
+  .vehicle-name {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #fff;
+  }
+  .status-badge {
+    background: rgba(34, 197, 94, 0.15);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    color: #22c55e;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-family: 'Syne', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .status-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #22c55e;
+    animation: pulse-green 2s ease-in-out infinite;
+  }
+  @keyframes pulse-green {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.3); }
+  }
+
+  /* Car illustration */
+  .car-svg-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 8px 0 20px;
+    filter: drop-shadow(0 0 30px rgba(245,158,11,0.2));
+  }
+  .car-svg-wrap svg {
+    width: 220px;
+  }
+
+  /* Lock buttons */
+  .lock-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .btn-lock {
+    padding: 14px;
+    border-radius: 18px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s;
+    letter-spacing: 0.5px;
+  }
+  .btn-lock.lock {
+    background: #f59e0b;
+    color: #0a0c14;
+  }
+  .btn-lock.unlock {
+    background: rgba(255,255,255,0.07);
+    color: #fff;
+    border: 1px solid #ffffff20;
+  }
+  .btn-lock:hover { transform: translateY(-1px); filter: brightness(1.1); }
+
+  /* Section title */
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .section-title .see-all {
+    font-size: 12px;
+    color: #f59e0b;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  /* Feature grid */
+  .feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+  .feature-card {
+    background: #111425;
+    border: 1px solid #1e2235;
+    border-radius: 22px;
+    padding: 18px 16px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s;
+  }
+  .feature-card:hover { border-color: #f59e0b55; transform: translateY(-2px); }
+  .feature-card.active {
+    background: linear-gradient(135deg, #1a2a10, #0f1e0a);
+    border-color: rgba(34,197,94,0.3);
+  }
+  .feature-card .icon {
+    width: 42px; height: 42px;
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+  .feature-card .icon.orange { background: rgba(245,158,11,0.15); }
+  .feature-card .icon.green { background: rgba(34,197,94,0.15); }
+  .feature-card .icon.blue { background: rgba(59,130,246,0.15); }
+  .feature-card .icon.red { background: rgba(239,68,68,0.15); }
+  .feature-card .feat-name {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+  .feature-card .feat-desc {
+    font-size: 11px;
+    color: #5a6080;
+    line-height: 1.4;
+  }
+  .feature-card .feat-tag {
+    position: absolute;
+    top: 14px; right: 14px;
+    font-size: 9px;
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  .feat-tag.on { background: rgba(34,197,94,0.15); color: #22c55e; }
+  .feat-tag.off { background: rgba(255,255,255,0.06); color: #5a6080; }
+
+  /* Activity log */
+  .activity-list {
+    margin-bottom: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .activity-item {
+    background: #111425;
+    border: 1px solid #1e2235;
+    border-radius: 18px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .act-icon {
+    width: 38px; height: 38px;
+    border-radius: 13px;
+    background: rgba(245,158,11,0.12);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+  .act-info { flex: 1; }
+  .act-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #e0e4f0;
+    margin-bottom: 2px;
+  }
+  .act-time { font-size: 11px; color: #404565; }
+  .act-status { font-size: 11px; font-weight: 600; font-family: 'Syne', sans-serif; }
+  .act-status.locked { color: #f59e0b; }
+  .act-status.unlocked { color: #22c55e; }
+
+  /* Battery strip */
+  .battery-strip {
+    background: #111425;
+    border: 1px solid #1e2235;
+    border-radius: 22px;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 22px;
+  }
+  .bat-icon { font-size: 26px; }
+  .bat-info { flex: 1; }
+  .bat-label { font-size: 11px; color: #5a6080; font-family: 'Syne', sans-serif; text-transform: uppercase; letter-spacing: 1.5px; }
+  .bat-val { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 22px; color: #fff; margin: 2px 0 6px; }
+  .bat-bar { height: 6px; background: #1e2235; border-radius: 6px; overflow: hidden; }
+  .bat-fill { height: 100%; border-radius: 6px; background: linear-gradient(90deg, #f59e0b, #fcd34d); width: 75%; }
+  .bat-charging {
+    font-size: 11px;
+    color: #22c55e;
+    background: rgba(34,197,94,0.12);
+    padding: 5px 12px;
+    border-radius: 12px;
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+  }
+
+  /* Bottom nav */
+  .bottom-nav {
+    background: #0d0f1c;
+    border-top: 1px solid #1e2235;
+    padding: 14px 32px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    bottom: 0;
+  }
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    opacity: 0.4;
+    transition: opacity 0.2s;
+  }
+  .nav-item.active { opacity: 1; }
+  .nav-icon { font-size: 22px; }
+  .nav-label { font-size: 9px; color: #fff; font-family: 'Syne', sans-serif; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; }
+  .nav-item.active .nav-label { color: #f59e0b; }
+  .nav-item.active .nav-icon { filter: drop-shadow(0 0 6px rgba(245,158,11,0.6)); }
+
+  /* Animations */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .vehicle-card { animation: fadeUp 0.5s ease 0.1s both; }
+  .feature-grid { animation: fadeUp 0.5s ease 0.2s both; }
+  .activity-list { animation: fadeUp 0.5s ease 0.3s both; }
+  .battery-strip { animation: fadeUp 0.5s ease 0.4s both; }
+</style>
+</head>
+
+<script>
+const ws = new WebSocket("ws://localhost:8765");
+
+ws.onopen = () => {
+    console.log("[WS] Terhubung ke Python bridge");
+};
+
+ws.onmessage = (event) => {
+    const data = JSON.parse(event.data);
+    console.log("[WS] Data masuk:", data);
+    updateUI(data.status, data.timestamp);
+};
+
+ws.onclose = () => {
+    console.log("[WS] Koneksi terputus");
+};
+
+function updateUI(status, timestamp) {
+    const card = document.querySelector('.vehicle-card');
+    const badge = document.querySelector('.status-badge');
+    const dot = document.querySelector('.status-dot');
+
+    // Toggle class locked/unlocked
+    if (status === "UNLOCKED" || status === "AUTHORIZED") {
+        card.classList.add('unlocked-state');
+        badge.innerHTML = `<span class="status-dot"></span> UNLOCKED`;
+    } else if (status === "LOCKED") {
+        card.classList.remove('unlocked-state');
+        badge.innerHTML = `<span class="status-dot"></span> LOCKED`;
+    } else if (status === "DENIED") {
+        // Flash merah sebentar
+        card.style.borderColor = "#ef4444";
+        setTimeout(() => card.style.borderColor = "", 1000);
+    }
+
+    // Update activity log
+    addActivity(status, timestamp);
+}
+
+function addActivity(status, timestamp) {
+    const list = document.querySelector('.activity-list');
+    if (!list) return;
+
+    const icons = {
+        "LOCKED": "🔒",
+        "UNLOCKED": "🔓",
+        "AUTHORIZED": "✅",
+        "DENIED": "❌"
+    };
+
+    const colors = {
+        "LOCKED": "locked",
+        "UNLOCKED": "unlocked",
+        "AUTHORIZED": "unlocked",
+        "DENIED": "locked"
+    };
+
+    const item = document.createElement('div');
+    item.className = 'activity-item';
+    item.innerHTML = `
+        <div class="act-icon">${icons[status] || "📡"}</div>
+        <div class="act-info">
+            <div class="act-title">${status}</div>
+            <div class="act-time">${timestamp}</div>
+        </div>
+        <div class="act-status ${colors[status] || ''}">${status}</div>
+    `;
+
+    // Insert di atas, max 5 item
+    list.insertBefore(item, list.firstChild);
+    while (list.children.length > 5) {
+        list.removeChild(list.lastChild);
+    }
+}
+
+// Kirim command dari tombol HTML ke Python
+function sendCommand(cmd) {
+    if (ws.readyState === WebSocket.OPEN) {
+        ws.send(cmd);
+        console.log(`[WEB -> WS]: ${cmd}`);
+    }
+}
+
+// Hubungkan ke tombol Lock/Unlock di HTML
+document.querySelector('.btn-lock.lock')?.addEventListener('click', () => sendCommand('CMD1'));
+document.querySelector('.btn-lock.unlock')?.addEventListener('click', () => sendCommand('CMD2'));
+</script>
+
+<body>
+
+<div class="phone-wrap">
+  <div class="phone-label">WISE — Mobile UI · Figma Reference</div>
+  <div class="phone">
+    <!-- Dynamic island -->
+    <div class="dynamic-island"></div>
+
+    <!-- Status bar -->
+    <div class="status-bar">
+      <span class="status-time">10:09</span>
+      <div class="status-icons">
+        <!-- Signal -->
+        <svg viewBox="0 0 24 24"><rect x="1" y="15" width="3" height="6" rx="1"/><rect x="6" y="11" width="3" height="10" rx="1"/><rect x="11" y="7" width="3" height="14" rx="1"/><rect x="16" y="3" width="3" height="18" rx="1" opacity="0.3"/></svg>
+        <!-- WiFi -->
+        <svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg>
+        <!-- Battery -->
+        <svg viewBox="0 0 24 24"><rect x="2" y="7" width="18" height="10" rx="2"/><path d="M22 11v2" stroke-width="2" stroke-linecap="round"/><rect x="4" y="9" width="12" height="6" rx="1" fill="white"/></svg>
+      </div>
+    </div>
+
+    <!-- Scrollable screen -->
+    <div class="screen-content">
+
+      <!-- Header -->
+      <div class="header">
+        <div class="logo">W<span>I</span>SE</div>
+        <div class="avatar">👤</div>
+      </div>
+
+      <!-- Greeting -->
+      <div class="greeting">
+        <div class="sub">Selamat Pagi</div>
+        <h1>Smart Access<br>Made <em>Simple</em></h1>
+      </div>
+
+      <!-- Vehicle Status Card -->
+      <div class="vehicle-card">
+        <div class="vehicle-card-top">
+          <div>
+            <div class="vehicle-label">Kendaraan Anda</div>
+            <div class="vehicle-name">Honda Civic 2023</div>
+          </div>
+          <div class="status-badge">
+            <div class="status-dot"></div>
+            TERKUNCI
+          </div>
+        </div>
+
+        <!-- Car SVG -->
+        <div class="car-svg-wrap">
+          <svg viewBox="0 0 340 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Car body -->
+            <path d="M30 110 Q35 80 60 70 L100 50 Q130 35 170 33 Q210 31 240 50 L280 70 Q305 80 310 110 Z" fill="#0e2040" stroke="#f59e0b" stroke-width="1.5"/>
+            <!-- Roof -->
+            <path d="M100 70 Q130 45 170 43 Q210 41 240 70" fill="#0a1830" stroke="#1e3a5f" stroke-width="1"/>
+            <!-- Windows -->
+            <path d="M108 68 Q125 52 155 50 L190 50 Q218 52 232 68 Z" fill="#0d2545" stroke="#1e4070" stroke-width="1"/>
+            <!-- Door line -->
+            <line x1="170" y1="68" x2="170" y2="110" stroke="#1e3a5f" stroke-width="1"/>
+            <!-- Wheels -->
+            <circle cx="90" cy="112" r="26" fill="#0a0c14" stroke="#f59e0b" stroke-width="2"/>
+            <circle cx="90" cy="112" r="16" fill="#111425" stroke="#1e3050" stroke-width="1.5"/>
+            <circle cx="90" cy="112" r="5" fill="#f59e0b"/>
+            <circle cx="250" cy="112" r="26" fill="#0a0c14" stroke="#f59e0b" stroke-width="2"/>
+            <circle cx="250" cy="112" r="16" fill="#111425" stroke="#1e3050" stroke-width="1.5"/>
+            <circle cx="250" cy="112" r="5" fill="#f59e0b"/>
+            <!-- Ground line -->
+            <line x1="50" y1="138" x2="290" y2="138" stroke="#1e2235" stroke-width="1"/>
+            <!-- Headlight -->
+            <ellipse cx="305" cy="95" rx="8" ry="5" fill="#f59e0b" opacity="0.6"/>
+            <!-- Lock icon center -->
+            <text x="165" y="95" font-size="18" fill="#f59e0b" text-anchor="middle" opacity="0.8">🔒</text>
+            <!-- Signal rings -->
+            <circle cx="305" cy="95" r="16" fill="none" stroke="#f59e0b" stroke-width="1" opacity="0.3" stroke-dasharray="4 4"/>
+            <circle cx="305" cy="95" r="26" fill="none" stroke="#f59e0b" stroke-width="1" opacity="0.15"/>
+          </svg>
+        </div>
+
+        <!-- Buttons -->
+        <div class="lock-buttons">
+          <button class="btn-lock lock">🔒 Kunci</button>
+          <button class="btn-lock unlock">🔓 Buka Kunci</button>
+        </div>
+      </div>
+
+      <!-- Features -->
+      <div class="section-title">
+        Fitur Utama
+        <span class="see-all">Lihat Semua</span>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card active">
+          <span class="feat-tag on">ON</span>
+          <div class="icon green">📡</div>
+          <div class="feat-name">Wireless</div>
+          <div class="feat-desc">nRF24L01 aktif & terhubung</div>
+        </div>
+        <div class="feature-card">
+          <span class="feat-tag on">ON</span>
+          <div class="icon orange">🛡️</div>
+          <div class="feat-name">Anti Relay</div>
+          <div class="feat-desc">Transmit-on-demand aktif</div>
+        </div>
+        <div class="feature-card">
+          <span class="feat-tag off">OFF</span>
+          <div class="icon blue">📱</div>
+          <div class="feat-name">Multi-Device</div>
+          <div class="feat-desc">Autentikasi multi perangkat</div>
+        </div>
+        <div class="feature-card">
+          <span class="feat-tag on">ON</span>
+          <div class="icon red">💡</div>
+          <div class="feat-name">OLED Status</div>
+          <div class="feat-desc">Tampilan layar jam aktif</div>
+        </div>
+      </div>
+
+      <!-- Battery -->
+      <div class="battery-strip">
+        <div class="bat-icon">⌚</div>
+        <div class="bat-info">
+          <div class="bat-label">Baterai Wearable</div>
+          <div class="bat-val">75%</div>
+          <div class="bat-bar"><div class="bat-fill"></div></div>
+        </div>
+        <div class="bat-charging">⚡ Charged</div>
+      </div>
+
+      <!-- Activity Log -->
+      <div class="section-title">
+        Aktivitas Terakhir
+        <span class="see-all">Lihat Semua</span>
+      </div>
+      <div class="activity-list">
+        <div class="activity-item">
+          <div class="act-icon">🔒</div>
+          <div class="act-info">
+            <div class="act-title">Kendaraan Dikunci</div>
+            <div class="act-time">Hari ini, 08:45</div>
+          </div>
+          <div class="act-status locked">Locked</div>
+        </div>
+        <div class="activity-item">
+          <div class="act-icon">🔓</div>
+          <div class="act-info">
+            <div class="act-title">Kendaraan Dibuka</div>
+            <div class="act-time">Hari ini, 07:30</div>
+          </div>
+          <div class="act-status unlocked">Unlocked</div>
+        </div>
+        <div class="activity-item">
+          <div class="act-icon">⚠️</div>
+          <div class="act-info">
+            <div class="act-title">Akses Ditolak</div>
+            <div class="act-time">Kemarin, 23:12</div>
+          </div>
+          <div class="act-status locked">Denied</div>
+        </div>
+      </div>
+
+    </div><!-- /screen-content -->
+
+    <!-- Bottom Nav -->
+    <div class="bottom-nav">
+      <div class="nav-item active">
+        <div class="nav-icon">🏠</div>
+        <div class="nav-label">Home</div>
+      </div>
+      <div class="nav-item">
+        <div class="nav-icon">🔑</div>
+        <div class="nav-label">Akses</div>
+      </div>
+      <div class="nav-item">
+        <div class="nav-icon">🕐</div>
+        <div class="nav-label">Log</div>
+      </div>
+      <div class="nav-item">
+        <div class="nav-icon">⚙️</div>
+        <div class="nav-label">Setelan</div>
+      </div>
+    </div>
+
+  </div><!-- /phone -->
+</div>
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+body{
+    margin:0;
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.watch{
+
+    width:360px;
+    height:380px;
+
+    border-radius:35px;
+
+    border:4px solid #182848;
+
+    background:black;
+
+    color:white;
+
+    padding:20px;
+
+    box-sizing:border-box;
+}
+
+.topbar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    font-size:18px;
+    font-weight:bold;
+}
+
+.battery{
+
+    display:flex;
+    align-items:center;
+    gap:5px;
+}
+
+.battery-box{
+
+    width:30px;
+    height:12px;
+
+    border:2px solid #222;
+
+    border-radius:3px;
+}
+
+.battery-fill{
+
+    width:100%;
+    height:100%;
+
+    background:#1aff00;
+}
+
+#clock{
+
+    font-size:20px;
+}
+
+.date{
+
+    text-align:center;
+
+    margin-top:10px;
+
+    font-size:22px;
+    font-weight:bold;
+}
+
+.status{
+
+    text-align:center;
+
+    margin-top:5px;
+
+    color:#ddd;
+
+    font-size:18px;
+}
+
+.car-area{
+
+    display:flex;
+    justify-content:center;
+
+    margin-top:10px;
+}
+
+.car-area img{
+
+    width:180px;
+
+    filter:drop-shadow(0px 0px 20px #00aaff);
+}
+
+.locked{
+
+    text-align:center;
+
+    margin-top:10px;
+
+    font-size:48px;
+    font-weight:bold;
+
+    color:#00ff66;
+
+    text-shadow:
+    0 0 15px #00ff66,
+    0 0 30px #00ff66;
+}
+
+.unlocked{
+
+    color:#ffaa00;
+
+    text-shadow:
+    0 0 15px #ffaa00,
+    0 0 30px #ffaa00;
+}
+
+.message{
+
+    text-align:center;
+
+    margin-top:10px;
+
+    font-size:24px;
+
+    color:#00ff66;
+}
+
+button{
+
+    margin-top:20px;
+
+    width:100%;
+    height:40px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#1c1c1c;
+
+    color:white;
+
+    cursor:pointer;
+}

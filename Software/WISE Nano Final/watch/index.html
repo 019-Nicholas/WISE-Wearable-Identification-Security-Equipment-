@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WISE Wearable</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="watch">
+
+    <div class="topbar">
+
+        <div class="battery">
+            <span id="batteryText">100%</span>
+            <div class="battery-box">
+                <div class="battery-fill"></div>
+            </div>
+        </div>
+
+        <div id="clock">09:41</div>
+
+    </div>
+
+    <hr>
+
+    <div class="date" id="date">
+        Sel, 02 Jun
+    </div>
+
+    <div class="status">
+        Connected
+    </div>
+
+    <div class="car-area">
+
+        <img id="carImage"
+        src="https://cdn-icons-png.flaticon.com/512/744/744465.png">
+
+    </div>
+
+    <div id="lockText" class="locked">
+        LOCKED
+    </div>
+
+    <hr>
+
+    <div id="message" class="message">
+        ● Mobil Aman
+    </div>
+
+    <button onclick="toggleLock()">
+        Demo Toggle
+    </button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
