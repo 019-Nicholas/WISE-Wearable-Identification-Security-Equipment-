@@ -1,10 +1,14 @@
 # WISE
 
 <p align="center">
-  <img src="docs/images/logo.png" width="700">
+  <img src="docs/images/logo.png" width="700" alt="WISE Logo">
 </p>
 
-### Wearable Intelligent Security Entry
+<h2 align="center">Wearable Intelligent Security Entry</h2>
+
+<p align="center">
+  Wearable Secure Access System berbasis AVR untuk mengurangi risiko relay attack pada sistem keyless entry konvensional.
+</p>
 
 ---
 
@@ -50,7 +54,7 @@ Sistem menggunakan mekanisme transmit-on-demand, sehingga sinyal wireless hanya 
 ## 🔧 Komponen Hardware
 
 | Komponen | Fungsi |
-|---|---|
+|-----------|-----------|
 | ATmega328P | Wearable controller |
 | Arduino Mega 2560 | Receiver controller |
 | nRF24L01 | Wireless communication |
@@ -64,6 +68,8 @@ Sistem menggunakan mekanisme transmit-on-demand, sehingga sinyal wireless hanya 
 
 ## 🧭 Visualisasi Sistem
 
+### 📊 System Documentation
+
 <p align="center">
 
 <a href="docs/images/block_diagram.png">
@@ -75,8 +81,14 @@ Sistem menggunakan mekanisme transmit-on-demand, sehingga sinyal wireless hanya 
 </a>
 
 <a href="https://drive.google.com/drive/folders/1QzS82XRwplpNYwvQA6O3_1Lwl-5nDHhQ?usp=sharing">
-<img src="https://img.shields.io/badge/draw.io-Flowchart_program_WISE-F08705?style=for-the-badge&logo=diagramsdotnet&logoColor=white">
+<img src="https://img.shields.io/badge/draw.io-Flowchart_Program-F08705?style=for-the-badge&logo=diagramsdotnet&logoColor=white">
 </a>
+
+</p>
+
+### 🔧 Design Assets
+
+<p align="center">
 
 <a href="docs/images/hardware_design.png">
 <img src="https://img.shields.io/badge/Hardware-Design-FF9800?style=for-the-badge&logo=raspberrypi&logoColor=white">
@@ -89,6 +101,12 @@ Sistem menggunakan mekanisme transmit-on-demand, sehingga sinyal wireless hanya 
 <a href="docs/images/gui_preview.png">
 <img src="https://img.shields.io/badge/GUI-Monitoring-4CAF50?style=for-the-badge&logo=qt&logoColor=white">
 </a>
+
+</p>
+
+### 🚀 Demonstration & Resources
+
+<p align="center">
 
 <a href="https://wokwi.com/projects/466366790973248513">
 <img src="https://img.shields.io/badge/Wokwi-WISE_Simulation-E53935?style=for-the-badge&logo=arduino&logoColor=white">
@@ -104,10 +122,12 @@ Sistem menggunakan mekanisme transmit-on-demand, sehingga sinyal wireless hanya 
 
 </p>
 
+---
+
 ## 👥 Tim Pengembang
 
 | Nama | NRP | Divisi |
-|---|---|---|
+|--------|--------|--------|
 | [Nicholas Miftahudin IB](https://github.com/019-Nicholas) | 2124600019 | Project Manager |
 | [Susanto Angga Adi P.](https://github.com/022-ANGGA) | 2124600022 | Software Engineer |
 | [Aditya Triyoga H.](https://github.com/030-Adityatriyoga) | 2124600030 | Hardware Engineer |
@@ -127,3 +147,11 @@ Sistem menggunakan mekanisme transmit-on-demand, sehingga sinyal wireless hanya 
 - Multi-device authentication
 - Compact custom PCB development
 - Waterproof wearable casing
+
+---
+
+<p align="center">
+  <b>WISE — Wearable Intelligent Security Entry</b>
+  <br>
+  Secure Access Through Wearable Intelligence
+</p>
