@@ -98,8 +98,11 @@ Sistem menggunakan mekanisme transmit-on-demand, sehingga sinyal wireless hanya 
 <img src="https://img.shields.io/badge/Video-Demo-FF0000?style=for-the-badge&logo=youtube&logoColor=white">
 </a>
 
-</p>
+<a href="https://canva.link/ahfylxyr4frrjm0">
+<img src="https://img.shields.io/badge/Canva-Presentation-00C4CC?style=for-the-badge&logo=canva&logoColor=white">
+</a>
 
+</p>
 
 ## 👥 Tim Pengembang
 
@@ -110,7 +113,7 @@ Sistem menggunakan mekanisme transmit-on-demand, sehingga sinyal wireless hanya 
 | [Aditya Triyoga H.](https://github.com/030-Adityatriyoga) | 2124600030 | Hardware Engineer |
 | [Trimuna Tsuroya](https://github.com/TrimunaTsuroya-2125640037) | 2125640037 | 3D Designer |
 | [M. Sagara Putra R.](https://github.com/025-Garaa) | 2124600025 | UI/UX Designer |
-| [Nauval Putra H.](https://github.com/nauvalph-009)| 2124600009 | UI/UX Designer |
+| [Nauval Putra H.](https://github.com/nauvalph-009) | 2124600009 | UI/UX Designer |
 
 ---
 
