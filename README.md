@@ -76,10 +76,6 @@ Sistem menggunakan mekanisme transmit-on-demand, sehingga sinyal wireless hanya 
 <img src="https://img.shields.io/badge/System-Block_Diagram-0078D7?style=for-the-badge&logo=diagramsdotnet&logoColor=white">
 </a>
 
-<a href="docs/images/flowchart.png">
-<img src="https://img.shields.io/badge/Flowchart-PNG-00BCD4?style=for-the-badge&logo=mermaid&logoColor=white">
-</a>
-
 <a href="https://drive.google.com/drive/folders/1QzS82XRwplpNYwvQA6O3_1Lwl-5nDHhQ?usp=sharing">
 <img src="https://img.shields.io/badge/draw.io-Flowchart_Program-F08705?style=for-the-badge&logo=diagramsdotnet&logoColor=white">
 </a>
